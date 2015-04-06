@@ -565,13 +565,13 @@ app.get('/sport/teaminfo', function (req, res) {
                 '<th><!-- VIEW MORE COL --></th>' +
                 '<th><!-- Delete Column --></th>' +
                 '</tr>';
-
-            for (var i=0; i < PlayerInfo.length; i++) {
+            if(PlayerInfo[0].First_Name){
+                for (var i=0; i < PlayerInfo.length; i++) {
                     responseHTML +=
                     '<tr><td>' + PlayerInfo[i].First_Name + '</td>' +
-                    '<td>' + PlayerInfo[i].Last_Name + '</td>' +
-                    '<td>' + PlayerInfo[i].HSName + '</td>' +
-                    '<td>' + PlayerInfo[i].Number + '</td>' +
+                        '<td>' + PlayerInfo[i].Last_Name + '</td>' +
+                        '<td>' + PlayerInfo[i].HSName + '</td>' +
+                        '<td>' + PlayerInfo[i].Number + '</td>' +
 
 
 
@@ -581,6 +581,7 @@ app.get('/sport/teaminfo', function (req, res) {
                     '<td><a href="/player/delete?HSTeamID=' + HSTeamID + '&PlayerID=' + PlayerInfo[i].PlayerID + '">Delete Player</a></td>' +
                     '</tr>'
                 }
+            }
 
         }
         responseHTML += '</table>' +
@@ -607,6 +608,7 @@ app.get('/sport/teaminfo', function (req, res) {
                 '<th><!-- VIEW MORE COL --></th>' +
                 '<th><!-- Delete Column --></th>' +
                 '</tr>';
+                if(CoachInfo[0].Name) {
                 for (var i=0; i < CoachInfo.length; i++) {
                     responseHTML +=
                     '<tr><td>' + CoachInfo[i].Name + '</td>' +
@@ -615,6 +617,7 @@ app.get('/sport/teaminfo', function (req, res) {
                     '<td><a href="/coach/viewmore?HSTeamID=' + HSTeamID + '&CoachID=' + CoachInfo[i].CoachID +'">View More</a></td>' +
                     '<td><a href="/coach/delete?HSTeamID=' + HSTeamID + '&CoachID=' + CoachInfo[i].CoachID + '">Delete Coach</a></td>' +
                     '</tr>'
+                }
                 }
 
             }
