@@ -1,7 +1,7 @@
 # CS355-Project-01
 Database project 01. Select/edit/delete/add a high school. Select/edit/delete/add a team within that specific high school. Select/edit/delete/add players and coaches to rosters within that specific team. 
 
-MySQL Script 
+#MySQL Script 
 use mlarson; 
 
 -- Project 01 HIGH SCHOOL SPORT TEAM DATABASE
