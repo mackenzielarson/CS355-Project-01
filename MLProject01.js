@@ -20,8 +20,8 @@ var express    = require('express'),
 
 var connection = mysql.createConnection({
     host     : 'cwolf.cs.sonoma.edu',
-    user     : 'mlarson',
-    password : '3913707'
+    user     : '',
+    password : ''
 });
 
 var app = module.exports = express.createServer();
